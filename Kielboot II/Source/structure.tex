@@ -6,7 +6,7 @@
 % Original author:
 % Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
 % Vel (vel@latextemplates.com)
-% 
+%
 % This file has been downloaded from:
 % http://www.LaTeXTemplates.com
 %
@@ -85,7 +85,7 @@
 \titlecontents{chapter}[1.25cm] % Indentation
 {\addvspace{12pt}\large\sffamily\bfseries} % Spacing and font options for chapters
 {\color{ocre!60}\contentslabel[\Large\thecontentslabel]{1.25cm}\color{ocre}} % Chapter number
-{\color{ocre}}  
+{\color{ocre}}
 {\color{ocre!60}\normalsize\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
 
 % Section text styling
@@ -127,7 +127,7 @@
 \titlecontents{lchapter}[0em] % Indenting
 {\addvspace{15pt}\large\sffamily\bfseries} % Spacing and font options for chapters
 {\color{ocre}\contentslabel[\Large\thecontentslabel]{1.25cm}\color{ocre}} % Chapter number
-{}  
+{}
 {\color{ocre}\normalsize\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
 
 % Section text styling
@@ -236,7 +236,7 @@
 \makeatother
 
 % Defines the theorem text style for each type of theorem to one of the three styles above
-\newcounter{dummy} 
+\newcounter{dummy}
 \numberwithin{dummy}{section}
 \theoremstyle{ocrenumbox}
 \newtheorem{theoremeT}[dummy]{Theorem}
@@ -269,7 +269,7 @@ leftmargin=0cm,
 rightmargin=0cm,
 innerbottommargin=5pt]{tBox}
 
-% Exercise box	  
+% Exercise box
 \newmdenv[skipabove=7pt,
 skipbelow=7pt,
 rightline=false,
@@ -321,7 +321,7 @@ innerbottommargin=5pt]{cBox}
 
 % Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
-\newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}				  
+\newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}
 \newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
 \newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}		
 \newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}	
@@ -343,7 +343,7 @@ innerbottommargin=5pt]{cBox}
 %----------------------------------------------------------------------------------------
 
 \makeatletter
-\renewcommand{\@seccntformat}[1]{\llap{\textcolor{ocre}{\csname the#1\endcsname}\hspace{1em}}}                    
+\renewcommand{\@seccntformat}[1]{\llap{\textcolor{ocre}{\csname the#1\endcsname}\hspace{1em}}}
 \renewcommand{\section}{\@startsection{section}{1}{\z@}
 {-4ex \@plus -1ex \@minus -.4ex}
 {1ex \@plus.2ex }
@@ -355,7 +355,7 @@ innerbottommargin=5pt]{cBox}
 \renewcommand{\subsubsection}{\@startsection {subsubsection}{3}{\z@}
 {-2ex \@plus -0.1ex \@minus -.2ex}
 {.2ex \@plus.2ex }
-{\normalfont\small\sffamily\bfseries}}                        
+{\normalfont\small\sffamily\bfseries}}
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}
 {-2ex \@plus-.2ex \@minus .2ex}
 {.1ex}
@@ -394,7 +394,7 @@ innerbottommargin=5pt]{cBox}
 \begin{tikzpicture}[remember picture,overlay]%
 \node at (current page.north west){\begin{tikzpicture}[remember picture,overlay]%	
 \fill[ocre!20](0cm, 0cm) rectangle (\paperwidth,-\paperheight);
-\node[anchor=north] at (4cm,-3.25cm){\color{ocre!40}\fontsize{220}{100}\sffamily\bfseries\thepart}; 
+\node[anchor=north] at (4cm,-3.25cm){\color{ocre!40}\fontsize{220}{100}\sffamily\bfseries\thepart};
 
 \ifnum \value{part}=1 %added by CP. If first chapter
 \node[anchor=south east] at (\paperwidth-1cm,-\paperheight+2.5cm){\parbox[t][][t]{8.5cm}{
@@ -407,10 +407,10 @@ innerbottommargin=5pt]{cBox}
 \node[anchor=south east] at (\paperwidth-1cm,-\paperheight+1cm) {\parbox[t][][t]{10cm}{
 		\large\sffamily\bfseries\large \color{ocre}
 		\begin{tabular}{p{0.9cm} p{8.5cm}}
-		\Large II & \hyperref[part:oefen]{Oefenvragen} \normalsize\Dotfill \vspace{0.05cm} \hspace{0.05cm} \pageref{part:oefen} \\ 
+		\Large II & \hyperref[part:oefen]{Oefenvragen} \normalsize\Dotfill \vspace{0.05cm} \hspace{0.05cm} \pageref{part:oefen} \\
 		\Large III & \hyperref[part:manoeuvre]{Zeilmanoeuvres} \normalsize\Dotfill \hspace{0.05cm} \pageref{part:manoeuvre}
 		\end{tabular}
-}}; 
+}};
 \else
 \node[anchor=south east] at (\paperwidth-1cm,-\paperheight+1cm){\parbox[t][][t]{8.5cm}{
 		\printcontents{l}{0}{\setcounter{tocdepth}{1}}%
@@ -453,7 +453,7 @@ innerbottommargin=5pt]{cBox}
 %	CHAPTER HEADINGS
 %----------------------------------------------------------------------------------------
 
-% A switch to conditionally include a picture, implemented by  Christian Hupfer
+% A switch to conditionally include a picture, implemented by Christian Hupfer
 \newif\ifusechapterimage
 \usechapterimagetrue
 \newcommand{\thechapterimage}{}%
@@ -473,7 +473,7 @@ innerbottommargin=5pt]{cBox}
 {\ifusechapterimage
 \textbf{\draw[anchor=west] (0cm,-4.6cm) node [fill=black,fill opacity=0.4,inner sep=12pt]{\strut\makebox[22cm]{}};}
 \draw[anchor=west] (1.5cm,-4.7cm) node {\Huge\sffamily\bfseries\color{white}\thechapter\autodot~#1\strut};
-\else 
+\else
 \textbf{\draw[anchor=west] (0cm,-1cm) node [fill=black,fill opacity=0.4,inner sep=12pt]{\strut\makebox[22cm]{}};}
 \draw[anchor=west] (1.5cm,-1.1cm) node {\Huge\sffamily\bfseries\color{white}\thechapter\autodot~#1\strut};
 \fi};
